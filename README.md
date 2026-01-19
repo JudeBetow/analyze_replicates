@@ -31,16 +31,17 @@ You can install the main dependencies with:
 ```python -m pip install pandas numpy matplotlib seaborn tqdm MDAnalysis```
 
 for trajectory support:
-
 ```python -m pip install MDAnalysis scipy # optional — for some statistics/normalizations```
 
 
 # Installation
 Clone your GitHub repo with:
-```git clone https://github.com/<your-org>/<repo>.git
-cd <repo>
+
+```git clone https://github.com/JudeBetow/analyze_replicates.git```
+```
+cd analyze_replicates
 # run the script with Python 3.8+
-python analyze_replicates.py -h
+python analyze_replicates.py --help
 ```
 # Input formats & expected files
 # 1) Precomputed PL-contacts CSV mode (recommended if you already computed contacts with Desmond, for example)
