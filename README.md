@@ -42,6 +42,7 @@ python analyze_replicates.py --help
 ```
 # Input formats & expected files
 # 1) Precomputed PL-contacts CSV mode (recommended if you already computed contacts with Desmond, for example)
+
 - One or more CSV files with per-frame contact information (the format expected by the script is: `frame,residue_A,residue_B,contact_flag` or similar — see example below).
 - The script will detect replicate names from the filenames (or you can pass an explicit mapping).
 ```
@@ -52,17 +53,18 @@ frame,residue_A,residue_B,contact
 ```
 # 2) Trajectory mode (compute contacts on the fly)
 - Coordinate/trajectory: e.g., traj.xtc, traj.dcd.
-- Topology: e.g., top.pdb, top.psf (a file MDAnalysis can read). I strongly recommend VMD to convert your CMS file to PDB format. Maestro converts, but there will be a mismatch in atom count between the PDB and XTC files.
+- Topology: e.g., top.pdb, top.psf (a file MDAnalysis can read). We strongly recommend VMD to convert your CMS file to PDB format. Maestro converts, but there will be a mismatch in atom count between the PDB and XTC files.
 - Selection strings/contact definition (e.g., residue sets or atom groups for the protein and ligand).
   
 # Usage:
 Before using `analyze_replicates.py`, compute pp distances with `pp-dist.py` and pp contacts per frame with `ppc-per-frame.py`.
 
-1. pp-dist.py: Compute per-pair minimum atom-atom distance statistics for a list of key pairs (using MDAnalysis.distance_array with PBC).
+1. pp-dist.py: Compute per-pair minimum atom-atom distance statistics for a list of key pairs (using `MDAnalysis.distance_array` with PBC).
 Inputs:
  - topology file (e.g., PSF, PDB)
  - one or more trajectory files (e.g., XTC)
  - optional pairs file (otherwise uses built-in default list)
+
 Outputs:
  - `outdir/csv/pp_pair_distances_perrep.csv`  (rows: replica, pair, mean_min_dist, std_min_dist, mean_min_dist_when_contact, n_contact_frames, frames_examined)
  - `outdir/csv/pp_pair_distances_aggregated.csv` (rows: pair, mean_of_rep_means, std_of_rep_means, mean_of_rep_contact_means, n_reps)
@@ -77,20 +79,21 @@ Example usage:
   --cutoff 4.0
   --subsample 1
 ```
-2. ppc-per-frame.py: Export per-frame PP contacts (atom-atom min distance <= cutoff) as CSV suitable for analyse_replicates.py.
+2. ppc-per-frame.py: Export per-frame PP contacts (atom-atom min distance <= cutoff) as CSV suitable for `analyse_replicates.py`.
 
 Example usage
 ```
 python ppc-per-frame.py \
   --topology 6m0j-topology-1.pdb \
-  --trajs 6m0j-traj-rep1.xtc,6m0j-traj-rep2.xtc,6m0j-traj-rep3.xtc \
+  --trajs traj-rep1.xtc,traj-rep2.xtc,traj-rep3.xtc \
   --out csv/pp_contacts_perframe.csv \
   --pairs-file pairs.txt \ # optional
   --cutoff 4.0 \
   --subsample 1
 ```
-A. Using precomputed PL-contacts DAT files, and apo-dist and apo-pp contacts (replace with your right paths):
+# A. Using analyze_replicates.py on precomputed PL-contacts DAT files, and apo-dist and apo-pp contacts (replace with your right paths):
 ```
+python analyze_replicates.py \
   --root /path/to/root/dir \ # root containing your replica sub-directories
   --outdir /path/to/outdir/analysis_output/ \
   --pp-contacts /path/to/pp-cont/pp-file.csv/ \ 
@@ -104,7 +107,9 @@ A. Using precomputed PL-contacts DAT files, and apo-dist and apo-pp contacts (re
 ```
 `--metric` chooses which disruption metric to compute (default: disruption_pct_by_lig).
 `--threshold` (percent points) controls classification into disrupted/partial/preserved.
-B. Computing contacts from trajectories (MDAnalysis required)
+
+
+# B. Computing contacts from trajectories (MDAnalysis required)
 ```
 python analyze_replicates.py \
   --traj replicate1.xtc replicate2.xtc replicate3.xtc \
@@ -121,10 +126,15 @@ python analyze_replicates.py \
 
 # Main outputs (file names used by the script)
 `<replicate>_occupancy.csv` — per-replicate ligand-occupancy tables (per residue/pair).
+
 `occupancy_aggregated.csv` — aggregated occupancy across replicates (mean, stdev, counts).
+
 `mapped_pp_contacts.csv` — mapped protein–protein contacts (if mapping was supplied/precomputed).
+
 `disruption_metrics.csv` — final per-pair statistics that include apo occupancy, ligand occupancies, delta, normalized scores, and classification (disrupted/partial/preserved).
+
 `disruption_heatmap.png` — heatmap visualising the chosen metric (e.g., disruption_pct_by_lig) for selected residue pairs (or all 14 pairs if not specified); includes a side colour bar showing the classification.
+
 `analysis.log` — execution log with parameters, timestamps and brief progress/error messages.
 
 Each CSV contains human-readable headers that can be opened in Excel, pandas, or other tools for further analysis.
