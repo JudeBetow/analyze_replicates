@@ -1,0 +1,80 @@
+2025-11-30 15:13:08,831 INFO: Starting analysis
+2025-11-30 15:13:08,832 INFO: Root = /home/jude/work/mdruns/np5129-plc
+2025-11-30 15:13:08,832 INFO: Found replicate directories: [PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3'), PosixPath('/home/jude/work/mdruns/np5129-plc/analysis_output')]
+2025-11-30 15:13:08,832 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1
+2025-11-30 15:13:09,881 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2
+2025-11-30 15:13:11,085 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3
+2025-11-30 15:13:12,284 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-11-30 15:13:12,285 WARNING: No ligand contact frames found in replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-11-30 15:13:12,285 INFO: No total_frames known yet for /home/jude/work/mdruns/np5129-plc/analysis_output; will infer later
+2025-11-30 15:13:12,289 INFO: Using total_frames = 1001
+2025-11-30 15:13:12,323 INFO: Loading precomputed protein-protein contact CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv
+2025-11-30 15:13:12,395 WARNING: Could not infer frame counts for replicas: ['analysis_output']. Set to 0; pass --rep-frame-lens to override.
+2025-11-30 15:13:12,395 INFO: Computed replica offsets: {'PL-Contacts_rep1': 0, 'PL-Contacts_rep2': 1001, 'PL-Contacts_rep3': 2002, 'analysis_output': 3003}
+2025-11-30 15:13:12,466 INFO: Loaded pp_contacts CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv rows=31987 columns=['replica', 'chain1', 'res1', 'chain2', 'res2', 'Frame']
+2025-11-30 15:13:12,466 INFO: Detected 'replica' column in pp_contacts CSV; mapping per-rep frames to global frames using offsets.
+2025-11-30 15:13:15,317 INFO: Mapped pp_contacts into 14 pairs with frame sets.
+2025-11-30 15:13:15,326 INFO: Wrote mapped pp contacts CSV: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-11-30 15:13:15,326 INFO: Loaded and mapped pp contacts; stored mapping csv at: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-11-30 15:13:15,355 INFO: Loaded pp distance stats for 14 pairs from /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_pair_distances_perrep.csv
+2025-11-30 15:13:17,196 INFO: Analysis complete. Outputs written to /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-11-30 15:18:44,680 INFO: Starting analysis
+2025-11-30 15:18:44,680 INFO: Root = /home/jude/work/mdruns/np5129-plc
+2025-11-30 15:18:44,681 INFO: Found replicate directories: [PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3'), PosixPath('/home/jude/work/mdruns/np5129-plc/analysis_output')]
+2025-11-30 15:18:44,682 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1
+2025-11-30 15:18:45,684 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2
+2025-11-30 15:18:46,670 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3
+2025-11-30 15:18:47,752 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-11-30 15:18:47,753 WARNING: No ligand contact frames found in replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-11-30 15:18:47,753 INFO: No total_frames known yet for /home/jude/work/mdruns/np5129-plc/analysis_output; will infer later
+2025-11-30 15:18:47,755 INFO: Using total_frames = 1001
+2025-11-30 15:18:47,781 INFO: Loading precomputed protein-protein contact CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv
+2025-11-30 15:18:47,846 WARNING: Could not infer frame counts for replicas: ['analysis_output']. Set to 0; pass --rep-frame-lens to override.
+2025-11-30 15:18:47,846 INFO: Computed replica offsets: {'PL-Contacts_rep1': 0, 'PL-Contacts_rep2': 1001, 'PL-Contacts_rep3': 2002, 'analysis_output': 3003}
+2025-11-30 15:18:47,900 INFO: Loaded pp_contacts CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv rows=31987 columns=['replica', 'chain1', 'res1', 'chain2', 'res2', 'Frame']
+2025-11-30 15:18:47,900 INFO: Detected 'replica' column in pp_contacts CSV; mapping per-rep frames to global frames using offsets.
+2025-11-30 15:18:50,704 INFO: Mapped pp_contacts into 14 pairs with frame sets.
+2025-11-30 15:18:50,717 INFO: Wrote mapped pp contacts CSV: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-11-30 15:18:50,717 INFO: Loaded and mapped pp contacts; stored mapping csv at: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-11-30 15:18:50,736 INFO: Loaded pp distance stats for 14 pairs from /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_pair_distances_perrep.csv
+2025-11-30 15:18:52,118 INFO: Analysis complete. Outputs written to /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:14:10,551 INFO: Starting analysis
+2025-12-10 16:14:10,553 INFO: Root = /home/jude/work/mdruns/np5129-plc
+2025-12-10 16:14:10,554 INFO: Found replicate directories: [PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3'), PosixPath('/home/jude/work/mdruns/np5129-plc/analysis_output')]
+2025-12-10 16:14:10,554 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1
+2025-12-10 16:14:11,904 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2
+2025-12-10 16:14:13,546 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3
+2025-12-10 16:14:15,188 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:14:15,190 WARNING: No ligand contact frames found in replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:14:15,190 INFO: No total_frames known yet for /home/jude/work/mdruns/np5129-plc/analysis_output; will infer later
+2025-12-10 16:14:15,195 INFO: Using total_frames = 1001
+2025-12-10 16:14:15,250 INFO: Loading precomputed protein-protein contact CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv
+2025-12-10 16:14:15,345 WARNING: Could not infer frame counts for replicas: ['analysis_output']. Set to 0; pass --rep-frame-lens to override.
+2025-12-10 16:14:15,346 INFO: Computed replica offsets: {'PL-Contacts_rep1': 0, 'PL-Contacts_rep2': 1001, 'PL-Contacts_rep3': 2002, 'analysis_output': 3003}
+2025-12-10 16:14:15,386 INFO: Loaded pp_contacts CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv rows=31987 columns=['replica', 'chain1', 'res1', 'chain2', 'res2', 'Frame']
+2025-12-10 16:14:15,387 INFO: Detected 'replica' column in pp_contacts CSV; mapping per-rep frames to global frames using offsets.
+2025-12-10 16:14:19,695 INFO: Mapped pp_contacts into 14 pairs with frame sets.
+2025-12-10 16:14:19,708 INFO: Wrote mapped pp contacts CSV: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-12-10 16:14:19,708 INFO: Loaded and mapped pp contacts; stored mapping csv at: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-12-10 16:14:19,749 INFO: Loaded pp distance stats for 14 pairs from /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_pair_distances_perrep.csv
+2025-12-10 16:14:21,679 INFO: Analysis complete. Outputs written to /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:16:13,153 INFO: Starting analysis
+2025-12-10 16:16:13,153 INFO: Root = /home/jude/work/mdruns/np5129-plc
+2025-12-10 16:16:13,153 INFO: Found replicate directories: [PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2'), PosixPath('/home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3'), PosixPath('/home/jude/work/mdruns/np5129-plc/analysis_output')]
+2025-12-10 16:16:13,154 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep1
+2025-12-10 16:16:14,660 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep2
+2025-12-10 16:16:16,331 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/PL-Contacts_rep3
+2025-12-10 16:16:18,128 INFO: Processing replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:16:18,129 WARNING: No ligand contact frames found in replicate /home/jude/work/mdruns/np5129-plc/analysis_output
+2025-12-10 16:16:18,129 INFO: No total_frames known yet for /home/jude/work/mdruns/np5129-plc/analysis_output; will infer later
+2025-12-10 16:16:18,132 INFO: Using total_frames = 1001
+2025-12-10 16:16:18,149 INFO: Loading precomputed protein-protein contact CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv
+2025-12-10 16:16:18,231 WARNING: Could not infer frame counts for replicas: ['analysis_output']. Set to 0; pass --rep-frame-lens to override.
+2025-12-10 16:16:18,232 INFO: Computed replica offsets: {'PL-Contacts_rep1': 0, 'PL-Contacts_rep2': 1001, 'PL-Contacts_rep3': 2002, 'analysis_output': 3003}
+2025-12-10 16:16:18,276 INFO: Loaded pp_contacts CSV: /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_contacts_perframe.csv rows=31987 columns=['replica', 'chain1', 'res1', 'chain2', 'res2', 'Frame']
+2025-12-10 16:16:18,276 INFO: Detected 'replica' column in pp_contacts CSV; mapping per-rep frames to global frames using offsets.
+2025-12-10 16:16:22,303 INFO: Mapped pp_contacts into 14 pairs with frame sets.
+2025-12-10 16:16:22,315 INFO: Wrote mapped pp contacts CSV: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-12-10 16:16:22,316 INFO: Loaded and mapped pp contacts; stored mapping csv at: /home/jude/work/mdruns/np5129-plc/analysis_output/pp_contacts_perframe_mapped.csv
+2025-12-10 16:16:22,343 INFO: Loaded pp distance stats for 14 pairs from /home/jude/work/mdruns/Protein-6m0j/analysis_output/csv/pp_pair_distances_perrep.csv
+2025-12-10 16:16:23,683 INFO: Analysis complete. Outputs written to /home/jude/work/mdruns/np5129-plc/analysis_output
