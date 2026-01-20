@@ -157,6 +157,7 @@ This project is released under the MIT License — see `LICENSE`.
 
 # Contact / Citation
 If you use this script in published work, please cite the GitHub repository and include a short methods note describing:
+
 (a) PL-contact replica used,
 
 (b) frames sampled per replicate,
